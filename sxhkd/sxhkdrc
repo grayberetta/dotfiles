@@ -1,0 +1,148 @@
+# bspwm keybindings
+
+# quit bspwm
+
+super + shift + BackSpace
+	
+	bspc quit
+
+# kill window
+ 
+super + q
+ 	bspc node -k
+
+# Focus on window
+
+super + {Left,Down,Up,Right}
+	bspc node -f {west,south,north,east}
+
+# Go to workspace
+
+super + {_,shift + }{1-9,0}
+    bspc desktop -f bspc query -m
+
+# Toggle fullscreen 
+
+super + f
+	crystal --fullscreen
+
+# Toggle floating
+
+super + shift + f
+	bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
+
+# Swap window
+
+super + shift + {Left,Down,Up,Right}
+	bspc node -s {west,south,north,east}
+
+# Focus on desktop
+
+super + {0-9}
+	bspc node -f {0-9}
+
+# Move floating window
+
+ctrl + alt + {Left,Right,Up,Down}
+	xdo move {-x -20, -x +20, -y -20, -y +20}
+
+# Restart bspwm
+
+super + shift + r
+	bspc wm -r
+
+# Restart polybar
+
+super + F1
+	killall polybar && ~/.config/polybar/launch.sh
+
+# Restart sxhkd
+
+super + shift + a
+	pkill -USR1 -x sxhkd
+
+# Reboot
+
+super + shift + q
+	reboot
+
+# Shutdown
+
+super + shift + x
+	shutdown now
+
+# Misc shit
+
+super + Return
+	kitty
+
+super + w
+	brave
+
+super + r
+	rpcs3
+
+super + i
+	imagewriter
+
+super + o
+	obs
+
+super + p
+	pcmanfm
+
+super + shift + p
+	pavucontrol
+
+super + a
+	lxappearance
+
+super + s
+	steam-native
+
+super + shift + s
+	spotify
+
+super + d
+	rofi -modi drun -show drun -show-icons
+
+super + shift + d
+	dolphin-emu
+
+super + h
+	kitty -e htop
+
+super + l
+	kitty -e lf
+
+super + shift + l
+	lutris
+
+super + c
+	clonehero
+
+super + n
+	nitrogen
+
+super + m
+	minecraft-launcher
+
+# Media Keys
+
+XF86AudioRaiseVolume
+	pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+XF86AudioLowerVolume
+	pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+XF86AudioMute
+	pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+XF86AudioPlay
+	playerctl play-pause
+
+XF86AudioPrev
+	playerctl previous
+
+XF86AudioNext
+	playerctl next
