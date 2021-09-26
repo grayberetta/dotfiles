@@ -18,13 +18,18 @@ super + {Left,Down,Up,Right}
 
 # Go to workspace
 
-super + {_,shift + }{1-9,0}
-    bspc desktop -f bspc query -m
+super + {1-9,0}
+    bspc desktop -f {1,2,3,4,5,6,7,8,9,10}
 
-# Toggle fullscreen 
+# Send to workspace
+
+super + shift + {1-9,0}
+	id=$(bspc query -N -n); bspc node -d ^{1-9}; bspc node -f ${id}
+
+# Toggle fullscreen (work in progress ...)
 
 super + f
-	crystal --fullscreen
+	bspc node focused,tiled -t fullscreen
 
 # Toggle floating
 
@@ -35,11 +40,6 @@ super + shift + f
 
 super + shift + {Left,Down,Up,Right}
 	bspc node -s {west,south,north,east}
-
-# Focus on desktop
-
-super + {0-9}
-	bspc node -f {0-9}
 
 # Move floating window
 
