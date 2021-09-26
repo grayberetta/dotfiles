@@ -2,12 +2,15 @@
 bspc rule -r "*"
 
 # Autostart
+killall polybar &
 ~/.config/polybar/launch.sh &
-sxhkd 
+killall sxkhd &
+sxhkd &
 
 # Monitors
-bspc monitor HDMI-A-1 -a 1 2 3 4 5 6 7
-bspc monitor HDMI-A-0 -a 8 9 10
+bspc query -M --names
+bspc monitor HDMI-A-0 -d 8 9 10
+bspc monitor HDMI-A-1 -d 1 2 3 4 5 6 7
 
 # Global Settings
 bspc config automatic_scheme alternate 
@@ -30,7 +33,7 @@ bspc config top_padding 28
 bspc config bottom_padding 0
 bspc config left_padding 0
 bspc config right_padding 0
-bspc config border_width 1
+bspc config border_width 2
 bspc config window_gap 10
 
 # Rules (ugh...)
