@@ -16,20 +16,15 @@ super + q
 super + {Left,Down,Up,Right}
 	bspc node -f {west,south,north,east}
 
-# Go to workspace
+# Focus/send to desktop
 
-super + {1-9,0}
-    bspc desktop -f {1,2,3,4,5,6,7,8,9,10}
+super + {_,shift + }{1-9,0}
+    bspc {desktop -f, node -d} focused:'^{1-9,0}'
 
-# Send to workspace
-
-super + shift + {1-9,0}
-	id=$(bspc query -N -n); bspc node -d ^{1-9}; bspc node -f ${id}
-
-# Toggle fullscreen (work in progress ...)
+# Set fullscreen (work in progress ...)
 
 super + f
-	bspc node focused,tiled -t fullscreen
+	bspc node -t fullscreen
 
 # Toggle floating
 
@@ -75,6 +70,9 @@ super + shift + x
 
 super + Return
 	kitty
+
+super + shift + Return
+	st
 
 super + w
 	brave
