@@ -9,13 +9,13 @@ sxhkd &
 
 # Monitors
 bspc query -M --names
-bspc monitor HDMI-A-0 -d 8 9 10
+bspc monitor HDMI-A-0 -d 8 9
 bspc monitor HDMI-A-1 -d 1 2 3 4 5 6 7
 
 # Global Settings
 bspc config automatic_scheme alternate 
 bspc config initial_polarity second_child
-bspc config pointer_modifier lock
+bspc config pointer_modifier shift
 bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
 bspc config pointer_action3 resize_corner
