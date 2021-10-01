@@ -1,0 +1,44 @@
+*foreground: #6a67ac
+*foreground_bold: #6a67ac
+*cursor: #1e1f29
+!!*background: #000000
+
+!! black
+*color0: #000000
+*color8: #4d4d4d
+!! red
+*color1: #ff5555
+*color9: #ff6e67
+!! green
+*color2: #50fa7b
+*color10: #5af78e
+!! yellow
+*color3: #f1fa8c
+*color11: #f4f99d
+!! blue
+*color4: #bd93f9
+*color12: #caa9fa
+!! magenta
+*color5: #ff79c6
+*color13: #ff92d0
+!! cyan
+*color6: #8be9fd
+*color14: #9aedfe
+!! white
+*color7: #bfbfbf
+*color15: #e6e6e6
+!! orange
+*color208: #e5582d
+*color214: #ff8700
+
+URxvt.depth: 32
+URxvt.background:	[90]#1e1f29
+URxvt.transparent: false
+
+URxvt.intensityStyles: false
+URxvt.font: xft:jetbrainsmono:medium:size=12
+URxvt.scrollBar: false
+URxvt.cursorColor: white
+
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
