@@ -1,17 +1,18 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 10;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int gappx     = 10;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Ubuntu Mono:size=15" };
+static const char *fonts[]          = { "JetBrains Mono Medium:size=15" };
 static const char dmenufont[]       = "Ubuntu Mono:size=10";
-static const char col_gray1[]       = "#000000";
-static const char col_gray2[]       = "#6a67ac";
-static const char col_gray3[]       = "#6a67ac";
-static const char col_gray4[]       = "#000000";
-static const char col_cyan[]        = "#6a67ac";
+static const char col_gray1[]       = "#1e1f29";
+static const char col_gray2[]       = "#c67afa";
+static const char col_gray3[]       = "#f197ac";
+static const char col_gray4[]       = "#1e1f29";
+static const char col_cyan[]        = "#c67afa";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -19,7 +20,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -64,10 +65,10 @@ static const char *rpcs3[] = { "rpcs3", NULL };
 static const char *imagewriter[] = { "imagewriter", NULL };
 static const char *obs[] = { "obs", NULL };
 static const char *pcmanfm[] = { "pcmanfm", NULL };
-static const char *pavucontrol[] = { "pavucontrol", NULL };
+static const char *pulsemixer[] = { "kitty", "-e", "pulsemixer", NULL };
 static const char *lxappearance[] = { "lxappearance", NULL };
 static const char *steam[] = { "steam-native", NULL };
-static const char *spotify[] = { "spotify", NULL };
+static const char *spotify[] = { "flatpak", "run", "com.spotify.Client", NULL };
 static const char *rofi[] = { "rofi", "-modi", "drun", "-show", "drun", "-show-icons", NULL };
 static const char *dolphin[] = { "dolphin-emu", NULL };
 static const char *htop[] = { "kitty", "-e", "htop", NULL };
@@ -97,7 +98,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_i,	   spawn,	   {.v = imagewriter } },
 	{ MODKEY,			XK_o,	   spawn,	   {.v = obs } },
 	{ MODKEY,			XK_p,	   spawn,	   {.v = pcmanfm } },
-	{ MODKEY|ShiftMask,		XK_p,	   spawn,	   {.v = pavucontrol } },
+	{ MODKEY|ShiftMask,		XK_p,	   spawn,	   {.v = pulsemixer } },
 	{ MODKEY|ShiftMask,		XK_a,	   spawn,	   {.v = lxappearance } },
 	{ MODKEY,			XK_s,	   spawn,	   {.v = steam } },
 	{ MODKEY|ShiftMask,		XK_s,	   spawn,	   {.v = spotify } },
@@ -130,6 +131,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_Right, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_Left,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_Right, tagmon,         {.i = +1 } },
+	{ MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
+	{ MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
