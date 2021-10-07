@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrains Mono Medium:pixelsize=18:antialias=true:autohint=true";
-static char *font2[] = { "Mononoki:pixelsize=16:antialias=true:autohint=true" };
+static char *font = "JetBrains Mono Medium:pixelsize=20:antialias=true:autohint=true";
+static char *font2[] = { "JetBrains Mono Medium:pixelsize=16:antialias=true:autohint=true" };
 static int borderpx = 2;
 
 /*
@@ -107,7 +107,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.97;
+float alpha = 0.95;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
@@ -134,7 +134,7 @@ static const char *colorname[] = {
 	"#f8f8f2", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
 	"#1e1f29", /* 258 -> bg */
-	"#6a67ac", /* 259 -> fg */
+	"#f197ac", /* 259 -> fg */
 };
 
 
@@ -435,7 +435,6 @@ static Key key[] = {
 	{ XK_BackSpace,     Mod1Mask,       "\033\177",      0,    0},
 	{ XK_Home,          ShiftMask,      "\033[2J",       0,   -1},
 	{ XK_Home,          ShiftMask,      "\033[1;2H",     0,   +1},
-	{ XK_Home,          XK_ANY_MOD,     "\033[H",        0,   -1},
 	{ XK_Home,          XK_ANY_MOD,     "\033[1~",       0,   +1},
 	{ XK_End,           ControlMask,    "\033[J",       -1,    0},
 	{ XK_End,           ControlMask,    "\033[1;5F",    +1,    0},
