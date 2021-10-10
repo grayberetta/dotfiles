@@ -9,10 +9,10 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrains Mono Medium:size=15" };
 static const char dmenufont[]       = "Ubuntu Mono:size=10";
 static const char col_gray1[]       = "#1e1f29";
-static const char col_gray2[]       = "#f197ac";
-static const char col_gray3[]       = "#f197ac";
+static const char col_gray2[]       = "#c7e8fb";
+static const char col_gray3[]       = "#c7e8fb";
 static const char col_gray4[]       = "#1e1f29";
-static const char col_cyan[]        = "#f197ac";
+static const char col_cyan[]        = "#c7e8fb";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
