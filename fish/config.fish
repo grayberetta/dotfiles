@@ -8,15 +8,16 @@ alias yeet='yay -Rcs'
 alias ls='ls -lah --color=auto'
 alias i3='vim ~/.config/i3/config'
 alias i3status='vim ~/.config/i3/i3status.conf'
-alias dwm='cd dwm && vim config.h'
-alias slstatus='cd slstatus && vim config.h'
+alias dwm='cd ~/.config/dwm && vim config.h'
+alias slstatus='cd ~/.config/slstatus && vim config.h'
+alias stconf='cd ~/.config/st && vim config.h'
 alias fishconf='vim ~/.config/fish/config.fish'
 alias kittyconf='vim ~/.config/kitty/kitty.conf'
 alias bspwm='vim ~/.config/bspwm/bspwmrc'
 alias sxhkd='vim ~/.config/sxhkd/sxhkdrc'
 
 function fish_prompt
-  set_color 6a67ac
+  set_color c7e8fb
   echo -n ""
   # winter
   #set_color 198c8c

@@ -1,0 +1,6 @@
+configuration {
+	modi: "drun";
+	theme: "onedark";
+	font: "JetBrains Mono Medium 15";
+	}
+@theme "/usr/share/rofi/themes/onedark.rasi"

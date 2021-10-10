@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Ubuntu Mono 13
+font pango:JetBrains Mono Medium 11
 default_border pixel 1 
 gaps outer 5 
 gaps inner 10
@@ -47,7 +47,7 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec st
 
 # kill focused window
 bindsym $mod+q kill
@@ -196,7 +196,7 @@ mode "resize" {
 #bindsym $mod+r mode "resize"
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #dd9249 #dd9249 #ffffff #dd9249   #dd9249
+client.focused          #c7e8fb #c7e8fb #ffffff #c7e8fb   #c7e8fb
 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
@@ -207,20 +207,21 @@ client.background       #ffffff
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	font pango:Ubuntu Mono 13
+	font pango:JetBrains Mono Medium 12
 	position top
 	colors {
-	focused_workspace  #dd9249 #dd9249 #ffffff
+	focused_workspace  #6a67ac #6a67ac #f8f8f2
         active_workspace   #333333 #5f676a #ffffff
-        inactive_workspace #000000 #000000 #888888
+        inactive_workspace #1e1f29 #1e1f29 #888888
         urgent_workspace   #2f343a #900000 #ffffff
         binding_mode       #2f343a #900000 #ffffff
+	background #1e1f29
 }
 	#status_command i3status -c ~/.config/i3/i3status.conf
         status_command /usr/bin/bumblebee-status \
 	-m title cpu sensors memory disk:root pasource pasink date time \
 	-p memory.format={used} disk.format={left} date.format="%a, %b %d, %y" \
-	-t iceberg-rainbow 
+	-t dracula-powerline 
 }
 
 ## Keybindings 
@@ -229,13 +230,14 @@ bindsym $mod+r exec rpcs3
 bindsym $mod+i exec imagewriter
 bindsym $mod+o exec obs
 bindsym $mod+p exec pcmanfm
-bindsym $mod+Shift+p exec pavucontrol
-bindsym $mod+a exec lxappearance
+bindsym $mod+Shift+p exec st -e pulsemixer
+bindsym $mod+Shift+a exec lxappearance
 bindsym $mod+s exec steam-native
 bindsym $mod+Shift+s exec spotify
 bindsym $mod+Shift+d exec dolphin-emu
-bindsym $mod++Shift+h exec kitty -e htop
-bindsym $mod+Shift+l exec kitty -e lf
+bindsym $mod+Shift+h exec st -e htop
+bindsym $mod+Shift+j exec st -e joshuto
+bindsym $mod+Shift+l exec st -e lf
 bindsym $mod+c exec clonehero
 bindsym $mod+n exec nitrogen
 bindsym $mod+m exec minecraft-launcher
