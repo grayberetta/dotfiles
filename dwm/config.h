@@ -2,17 +2,17 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 10;        /* gaps between windows */
+static const unsigned int gappx     = 5;       /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "JetBrains Mono Medium:size=15" };
-static const char dmenufont[]       = "Ubuntu Mono:size=10";
-static const char col_gray1[]       = "#1e1f29";
-static const char col_gray2[]       = "#c7e8fb";
-static const char col_gray3[]       = "#c7e8fb";
-static const char col_gray4[]       = "#1e1f29";
-static const char col_cyan[]        = "#c7e8fb";
+static const char *fonts[]          = { "Monofur:size=14" };
+static const char dmenufont[]       = "Mononoki:size=10";
+static const char col_gray1[]       = "#303443";
+static const char col_gray2[]       = "#f197ac";
+static const char col_gray3[]       = "#f197ac";
+static const char col_gray4[]       = "#303443";
+static const char col_cyan[]        = "#f179ac";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
@@ -79,6 +79,7 @@ static const char *lf[] = { "st", "-e", "lf", NULL };
 static const char *clonehero[] = { "clonehero", NULL };
 static const char *nitrogen[] = { "nitrogen", NULL };
 static const char *minecraft[] = { "minecraft-launcher", NULL };
+static const char *suspend[] = { "st", "-e", "sudo", "systemctl", "suspend", "&&", "betterlockscreen", "-l", NULL };
 static const char *shutdown[] = { "shutdown", "now", NULL };
 static const char *reboot[] = { "reboot", NULL };
 static const char *upvol[] = { "/usr/bin/pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL };
@@ -112,6 +113,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_c,	   spawn,	   {.v = clonehero } },
 	{ MODKEY,			XK_n,	   spawn,	   {.v = nitrogen } },
 	{ MODKEY,			XK_m,	   spawn,	   {.v = minecraft } },
+	{ MODKEY,			XK_x,	   spawn,	   {.v = suspend } },
 	{ MODKEY|ShiftMask,		XK_x,	   spawn,	   {.v = shutdown } },
 	{ MODKEY|ShiftMask,		XK_q,	   spawn,	   {.v = reboot } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
