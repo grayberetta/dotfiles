@@ -15,9 +15,10 @@ alias fishconf='vim ~/.config/fish/config.fish'
 alias kittyconf='vim ~/.config/kitty/kitty.conf'
 alias bspwm='vim ~/.config/bspwm/bspwmrc'
 alias sxhkd='vim ~/.config/sxhkd/sxhkdrc'
+alias sleep='systemctl suspend && betterlockscreen -l'
 
 function fish_prompt
-  set_color c7e8fb
+  set_color c197ac
   echo -n ""
   # winter
   #set_color 198c8c

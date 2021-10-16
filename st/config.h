@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrains Mono Medium:pixelsize=20:antialias=true:autohint=true";
-static char *font2[] = { "JetBrains Mono Medium:pixelsize=16:antialias=true:autohint=true" };
+static char *font = "Monofur:pixelsize=20:antialias=true:autohint=true";
+static char *font2[] = { "Monofur:pixelsize=18:antialias=true:autohint=true" };
 static int borderpx = 2;
 
 /*
@@ -133,8 +133,8 @@ static const char *colorname[] = {
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#c7e8fb", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
-	"#1e1f29", /* 258 -> bg */
-	"#c7e8fb", /* 259 -> fg */
+	"#303443", /* 258 -> bg */
+	"#f197ac", /* 259 -> fg */
 };
 
 
