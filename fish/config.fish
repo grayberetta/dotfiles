@@ -16,10 +16,11 @@ alias kittyconf='vim ~/.config/kitty/kitty.conf'
 alias bspwm='vim ~/.config/bspwm/bspwmrc'
 alias sxhkd='vim ~/.config/sxhkd/sxhkdrc'
 alias sleep='systemctl suspend && betterlockscreen -l'
+alias kwayland='XDG_SESSION_TYPE=wayland dbus-run-session startplasma-wayland'
 
-function fish_prompt
-  set_color c197ac
-  echo -n ""
+#function fish_prompt
+#  set_color c197ac
+#  echo -n ""
   # winter
   #set_color 198c8c
   #echo -n ">"
@@ -58,9 +59,9 @@ function fish_prompt
 #   echo -n ">"
 
 # end
-   echo -n "|"
-   echo -n (prompt_pwd)
-   echo -n "|"
-   echo -n " "
+#   echo -n "|"
+#   echo -n (prompt_pwd)
+#   echo -n "|"
+#   echo -n " "
 
-end
+#end

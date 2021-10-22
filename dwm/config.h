@@ -8,10 +8,10 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Monofur:size=14" };
 static const char dmenufont[]       = "Mononoki:size=10";
-static const char col_gray1[]       = "#303443";
+static const char col_gray1[]       = "#1e1f29";
 static const char col_gray2[]       = "#f197ac";
 static const char col_gray3[]       = "#f197ac";
-static const char col_gray4[]       = "#303443";
+static const char col_gray4[]       = "#1e1f29";
 static const char col_cyan[]        = "#f179ac";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -20,7 +20,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -66,7 +66,7 @@ static const char *rpcs3[] = { "rpcs3", NULL };
 static const char *imagewriter[] = { "imagewriter", NULL };
 static const char *obs[] = { "obs", NULL };
 static const char *pcmanfm[] = { "pcmanfm", NULL };
-static const char *pulsemixer[] = { "kitty", "-e", "pulsemixer", NULL };
+static const char *pulsemixer[] = { "st", "-e", "pulsemixer", NULL };
 static const char *lxappearance[] = { "lxappearance", NULL };
 static const char *steam[] = { "steam-native", NULL };
 static const char *spotify[] = { "spotify", NULL };
@@ -76,7 +76,7 @@ static const char *htop[] = { "st", "-e", "htop", NULL };
 static const char *joshuto[]  = { "st", "-e", "joshuto", NULL };
 static const char *lutris[] = { "lutris", NULL };
 static const char *lf[] = { "st", "-e", "lf", NULL };
-static const char *clonehero[] = { "clonehero", NULL };
+static const char *clonehero[] = { "/home/gray/.clonehero/clonehero", NULL };
 static const char *nitrogen[] = { "nitrogen", NULL };
 static const char *minecraft[] = { "minecraft-launcher", NULL };
 static const char *suspend[] = { "st", "-e", "sudo", "systemctl", "suspend", "&&", "betterlockscreen", "-l", NULL };
@@ -115,7 +115,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_m,	   spawn,	   {.v = minecraft } },
 	{ MODKEY,			XK_x,	   spawn,	   {.v = suspend } },
 	{ MODKEY|ShiftMask,		XK_x,	   spawn,	   {.v = shutdown } },
-	{ MODKEY|ShiftMask,		XK_q,	   spawn,	   {.v = reboot } },
+	{ MODKEY|ShiftMask,		XK_q,	   spawn,  {.v = reboot } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
