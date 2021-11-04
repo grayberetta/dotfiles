@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Monofur:pixelsize=20:antialias=true:autohint=true";
-static char *font2[] = { "Monofur:pixelsize=18:antialias=true:autohint=true" };
+static char *font = "Mononoki:pixelsize=18:antialias=true:autohint=true";
+static char *font2[] = { "Mononoki:pixelsize=18:antialias=true:autohint=true" };
 static int borderpx = 2;
 
 /*
@@ -17,7 +17,7 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/usr/bin/fish";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
@@ -61,7 +61,7 @@ static double maxlatency = 33;
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
  * attribute.
  */
-static unsigned int blinktimeout = 800;
+static unsigned int blinktimeout = 0;
 
 /*
  * thickness of underline and bar cursors
@@ -107,7 +107,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.95;
+float alpha = 0.90;
 float alphaOffset = 0.0;
 float alphaUnfocus;
 
@@ -133,8 +133,8 @@ static const char *colorname[] = {
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#c7e8fb", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
-	"#303443", /* 258 -> bg */
-	"#f197ac", /* 259 -> fg */
+	"#1e1f29", /* 258 -> bg */
+	"#c197ac", /* 259 -> fg */
 };
 
 

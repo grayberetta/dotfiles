@@ -1,0 +1,8 @@
+configuration {
+	modi: "drun";
+	theme: "slate";
+	font: "Monofur 18";
+	}
+//@theme "/usr/share/rofi/themes/onedark.rasi"
+//@theme "/usr/share/rofi/themes/purple.rasi"
+@theme "/usr/share/rofi/themes/slate.rasi"
