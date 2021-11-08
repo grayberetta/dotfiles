@@ -6,7 +6,7 @@ static const unsigned int gappx     = 5;       /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Mononoki:size=12" };
+static const char *fonts[]          = { "Mononoki:size=15" };
 static const char dmenufont[]       = "Mononoki:size=10";
 static const char col_gray1[]       = "#1e1f29";
 static const char col_gray2[]       = "#c197ac";
@@ -81,8 +81,8 @@ static const char *nitrogen[] = { "nitrogen", NULL };
 static const char *dunstctl[] = { "dunstctl", "set-paused", "toggle", NULL };
 static const char *minecraft[] = { "minecraft-launcher", NULL };
 static const char *suspend[] = { "st", "-e", "sudo", "systemctl", "suspend", "&&", "betterlockscreen", "-l", NULL };
-static const char *shutdown[] = { "st", "-e", "doas", "openrc-shutdown", "-p", "now", NULL };
-static const char *reboot[] = { "st", "-e", "doas", "openrc-shutdown", "-r", "now", NULL };
+static const char *poweroff[] = { "st", "-e", "doas", "poweroff", NULL };
+static const char *reboot[] = { "st", "-e", "doas", "reboot", NULL };
 static const char *upvol[] = { "/usr/bin/pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%", NULL };
 static const char *downvol[] = { "/usr/bin/pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%", NULL };
 static const char *mutevol[] = { "/usr/bin/pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
@@ -116,7 +116,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_n,	   spawn,	   {.v = dunstctl } },
 	{ MODKEY,			XK_m,	   spawn,	   {.v = minecraft } },
 	{ MODKEY,			XK_x,	   spawn,	   {.v = suspend } },
-	{ MODKEY|ShiftMask,		XK_x,	   spawn,	   {.v = shutdown } },
+	{ MODKEY|ShiftMask,		XK_x,	   spawn,	   {.v = poweroff } },
 	{ MODKEY|ShiftMask,		XK_q,	   spawn,  {.v = reboot } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
