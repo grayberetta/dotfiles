@@ -65,11 +65,11 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument */	
-	{ cpu_perc, " ^c#bc8be8^ cpu %s%%  ", NULL },
-	{ ram_used, "^c#c197ac^ ram %s  ", NULL },
-	{ disk_free, "^c#bc8be8^ disk %s  ", "/" },
+	{ cpu_perc, " ^c#70cfcc^ ^c#758da7^cpu %s%% ^c#c197ac^|", NULL },
+	{ ram_used, " ^c#70cfcc^ ^c#758da7^ram %s ^c#c197ac^|", NULL },
+	{ disk_free, " ^c#70cfcc^ ^c#758da7^disk %s ^c#c197ac^|", "/" },
 	/* { netspeed_rx, " %s  ", "enp27s0" },
 	{ netspeed_tx, " %s  ", "enp27s0" }, */
-	{ run_command, "^c#c197ac^ vol %s  ", "pamixer --get-volume-human" }, 
-	{ datetime, "^c#bc8be8^ %s ", "%a %m/%d/%y ^c#c197ac^ %I:%M:%S %P" },
+	{ run_command, " ^c#70cfcc^ ^c#758da7^vol %s ^c#c197ac^|", "pamixer --get-volume-human" }, 
+	{ datetime, " ^c#70cfcc^ %s ", "^c#758da7^%a %m/%d/%y ^c#c197ac^| ^c#70cfcc^ ^c#758da7^%I:%M:%S %P" },
 };
